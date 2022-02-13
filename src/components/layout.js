@@ -8,7 +8,7 @@ import{
     navLinkText
 } from './layout.module.css'
 
-const Layout = ({pageTitle, children }) => {
+function Layout({ pageTitle, children }) {
     return (
         <section className={container}>
             <title>{pageTitle}</title>
@@ -16,12 +16,12 @@ const Layout = ({pageTitle, children }) => {
                 <ul className={navLinks}>
                     <li className={navLinkItem}>
                         <Link to="/" className={navLinkText}>
-                        Home
+                            Home
                         </Link>
                     </li>
                     <li className={navLinkItem}>
                         <Link to="/about" className={navLinkText}>
-                        About
+                            About
                         </Link>
                     </li>
                 </ul>
