@@ -20,13 +20,23 @@ We can keep the data modular by simply pulling the information from those 2 diff
 
 GraphiQL can help you do this and allows you to explore your site data by using the GraphiQL query explorer window to generate GraphQL queries in the query writer window and output them in the Run window. 
 
-You can see all of this after you run your site and use this URL with the 3 underscores then ___graphql.
+You can see all of this after you run your site with the same url and append 3 underscores then ___graphql to the end of the url. When you do that Gatsby creates a special endpoint that lets you use  in-browser GraphiQL tool. This is what the url can look like.
 
 http://localhost:<portal number here>/___graphql
 
 - How do you get data out of the data layer?
 
 GraphQL frontend generated queries can do this. So when you go to
-http://localhost:8000/___graphql for example you can generate the queries as you navigating inside the Explorer window.
+http://localhost:8000/___graphql for example you can generate the queries as you navigate inside the Explorer window.
+
+So when getting data into the Gatsby data layer you use special types of backend plugins known as a source plugin from the plugin library. For example this plugin connects your Shopify data source to gatsby. https://www.gatsbyjs.com/plugins/gatsby-source-shopify/?=shopify  
+
+So basically your GraphQL Data Layer acts as the intermediatory between the front end and the back-end.
+
+To get data out of your data layer and to the front-end components you use use GraphQL queries inside those components, blog pages or header components. 
+
+Remember! Use the GraphiQL explorer to generate and test your queries that you can copy and paste into your components. Don't reinvent the wheel. 
+
+Ahh the power of using APIs... as opposed to staring at the screen figuring out how to write these queries from scratch.
 
 - What are the differences between a page query and useStaticQuery? How would you decide which one to use?
