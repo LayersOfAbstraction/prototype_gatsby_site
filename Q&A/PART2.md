@@ -18,7 +18,7 @@
 
 - How do you add a new page to your Gatsby site?
 
-You have to create a page component which can have only one container element, i.e HTML `div` tag or otr semantic tags such as `nav` or `section`.
+You have to create a page component which can have only one container element, i.e HTML `div` tag or other semantic tags such as `nav` or `section`.
 
 - **What are the three steps for writing a new React component?**
 
