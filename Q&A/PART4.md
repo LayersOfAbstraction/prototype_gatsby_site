@@ -43,6 +43,8 @@ Ahh the power of using APIs... as opposed to staring at the screen figuring out 
 
 - **What are the differences between a page query and useStaticQuery? How would you decide which one to use?**
 
+***useStaticQuery summary***
+
 Ok let's say we generate a GraphQL query, run it, copy the output to our component to return the names of our blog pages.
 
 ```jsx
@@ -57,6 +59,62 @@ Ok let's say we generate a GraphQL query, run it, copy the output to our compone
   "extensions": {}
 }
 ```
-we can use the generic Gatsby function  `useStaticQuery` to pull the data into building block component from the query.
 
-We can call the function once per a single file. Using it for multiple fields meas we need to merge the queries together into the same component.
+we can use the generic Gatsby function  `useStaticQuery` to pull the 
+data into building block component from the query.
+
+```jsx
+const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+```
+
+We can call the function once per a single file. Using it for multiple fields means we need to merge the queries together into the same component.
+
+***Page Queries summary***
+
+In page components you use page queries. To understand what page queries are we must understand that GraphQL page component queries are syntactically different from building block component queries. 
+
+Essentially page quries help us get data into our page components.
+
+We can set it up like this in Gatsby. 
+
+```jsx
+import * as React from 'react'
+
+// Step 1: Import the graphql tag
+import { graphql } from 'gatsby'
+
+const HomePage = ({ data }) => {
+  return (
+    <p>
+      { /* Step 3: Use the data in your component*/ }
+      { data.site.siteMetadata.description }
+    </p>
+  )
+}
+
+// Step 2: Export a page query
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+      }
+    }
+  }
+`
+
+export default HomePage
+```
+
+***So what's the difference?***
+
+One query is for the page component and one is for a building block component. Also you can define useStaticQuery in your building block component while page queries need to be applied externally to your page component. You can just call them there. So you would use them depending on what the component you are trying to build.
