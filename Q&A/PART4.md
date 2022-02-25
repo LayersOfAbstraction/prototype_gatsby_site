@@ -60,7 +60,7 @@ Ok let's say we generate a GraphQL query, run it, copy the output to our compone
 }
 ```
 
-we can use the generic Gatsby function  `useStaticQuery` to pull the 
+we can use the generic Gatsby function  `useStaticQuery` to pull the
 data into building block component from the query.
 
 ```jsx
@@ -80,11 +80,11 @@ We can call the function once per a single file. Using it for multiple fields me
 
 ***Page Queries summary***
 
-In page components you use page queries. To understand what page queries are we must understand that GraphQL page component queries are syntactically different from building block component queries. 
+In page components you use page queries. To understand what page queries are we must understand that GraphQL page component queries are syntactically different from building block component queries.
 
-Essentially page quries help us get data into our page components.
+Essentially page queries help us get data into our page components.
 
-We can set it up like this in Gatsby. 
+We can set it up like this in Gatsby.
 
 ```jsx
 import * as React from 'react'
