@@ -117,4 +117,8 @@ export default HomePage
 
 ***So what's the difference?***
 
-One query is for the page component and one is for a building block component. Also you can define useStaticQuery in your building block component while page queries need to be applied externally to your page component. You can just call them there. So you would use them depending on what the component you are trying to build.
+One query is for the page component and one is for a building block component. 
+
+Also you can define useStaticQuery in your building block component while page queries need to be applied externally to your page component. 
+
+You can just call them there. So you would use them depending on what the component you are trying to build.
