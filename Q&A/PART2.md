@@ -4,6 +4,8 @@ date: "2021-07-27"
 published: false
 ---
 
+[//]: # (This is to do with Part 2 of Gatsby's tutorial)
+
 # Summary #
 
 Just to note, Gatsby component syntax is from React.
