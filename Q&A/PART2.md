@@ -1,4 +1,16 @@
+---
+title: "Understanding Components and Props in Gatsby"
+date: "2021-07-27"
+published: false
+---
+
 # Summary #
+
+Just to note, Gatsby component syntax is from React.
+
+When you learn how to work with components in Gatsby to build blogs or render data back end sources you can transition gradually to React, one of the the most widely used Web frameworks used in the tech jobs market! 
+
+Is that cool or what!
 
 - **What’s the difference between a page component and a building-block component?**
 
