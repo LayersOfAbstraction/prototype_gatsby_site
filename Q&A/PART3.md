@@ -1,0 +1,1 @@
+To add a plugin to Gatsby we must import it. Declare in a component how we are going to use it and then export it.
